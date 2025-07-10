@@ -1,0 +1,20 @@
+# 基础模型配置
+model:
+  dim: 768
+  n_layers: 12
+  n_heads: 12
+  vocab_size: 50257  # GPT-2的词汇表大小
+  max_seq_len: 128  # 减小序列长度以适应小数据集
+
+training:
+  batch_size: 32
+  learning_rate: 6e-5
+  warmup_steps: 1000
+  max_steps: 10000
+
+rlhf:
+  reward_model_lr: 5e-6
+  ppo_epochs: 4
+  clip_epsilon: 0.2
+  gamma: 0.99
+  lam: 0.95
